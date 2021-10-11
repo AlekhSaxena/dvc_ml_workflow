@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: src
+Version: 0.0.1
+Summary: A small package for dvc ml pipeline demo
+Home-page: https://github.com/AlekhSaxena/empty
+Author: AlekhSaxena
+Author-email: alekhsaxena@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# empty
+ touch requirements.txt
+ pip install -r requirements.txt
+ 
+
