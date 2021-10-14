@@ -7,3 +7,9 @@ artifacts:
   split_data_dir: split_data_dir
   train: train.csv
   test: test.csv
+
+  model_dir: model_dir
+  model_file_name: ElasticNet.model
+
+  reports_dir: reports_dir
+  scores: scores.json

@@ -4,6 +4,7 @@ import pandas as pd
 import os
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
+import joblib 
 
 def train(config_path,params_path):
     config=read_yaml(config_path)
@@ -24,6 +25,15 @@ def train(config_path,params_path):
 
     lr=ElasticNet(alpha=alpha,l1_ratio=l1_ratio,random_state=random_state)
     lr.fit(train_x,train_y)
+
+    model_dir=config["artifacts"]["model_dir"]
+    model_dir=os.path.join(artifacts_dir,model_dir)
+    create_directory([model_dir])
+    model_file_name=config["artifacts"]["model_file_name"]
+
+    model_path=os.path.join(model_dir,model_file_name)
+
+    joblib.dump(lr,model_path)
     print("done")
 
 
